@@ -17,7 +17,7 @@ public class PageResult<T> {
 
     private T data;
 
-    private Boolean isSuccess;
+    private Boolean isSuccess = true;
 
     private String errorMessage;
 

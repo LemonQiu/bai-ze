@@ -1,5 +1,6 @@
 package com.kunlun.baize.service.impl;
 
+import com.kunlun.baize.common.annotation.PrintMethodLog;
 import com.kunlun.baize.common.utils.BeanConvertUtil;
 import com.kunlun.baize.dao.UserDAO;
 import com.kunlun.baize.sdk.UserQuery;
@@ -26,6 +27,7 @@ public class UserBoImpl implements UserBO {
     private UserDAO userDAO;
 
     @Override
+    @PrintMethodLog
     public List<UserVO> pageUser(UserQuery userQuery, Page page) {
         List<UserDO> userDoList = userDAO.pageUser(userQuery, page);
         if (CollectionUtils.isEmpty(userDoList)) {
